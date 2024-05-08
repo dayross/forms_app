@@ -11,5 +11,9 @@ sealed class CounterEvent extends Equatable {
 
 class CounterIncreased extends CounterEvent {
   final int value;
-  const CounterIncreased(this.value);  
+  const CounterIncreased(this.value);
+}
+
+class CounterReset extends CounterEvent {
+  const CounterReset();
 }
