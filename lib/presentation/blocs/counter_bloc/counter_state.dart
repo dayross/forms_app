@@ -1,10 +1,25 @@
 part of 'counter_bloc.dart';
 
-sealed class CounterState extends Equatable {
-  const CounterState();
-  
+class CounterState extends Equatable {
+  final int counter;
+  final int transactionCount;
+
+  const CounterState({
+    this.counter = 3, 
+    this.transactionCount = 0
+    });
+
+    CounterState copyWith({
+       int? counter,
+       int? transactionCount
+    }) => CounterState(
+      counter: counter ?? this.counter,
+      transactionCount: transactionCount ?? this.transactionCount
+    );
+
   @override
-  List<Object> get props => [];
+  List<Object> get props => [counter, transactionCount];
 }
 
-final class CounterInitial extends CounterState {}
+// por qué hay tantos states? 
+// porque hayb mucha variedad de etsados posibles

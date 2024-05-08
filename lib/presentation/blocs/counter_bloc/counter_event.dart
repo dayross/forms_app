@@ -1,8 +1,15 @@
 part of 'counter_bloc.dart';
 
+// esta clase define que tipos de eventos se reciben
+
 sealed class CounterEvent extends Equatable {
   const CounterEvent();
 
   @override
   List<Object> get props => [];
+}
+
+class CounterIncreased extends CounterEvent {
+  final int value;
+  const CounterIncreased(this.value);  
 }
