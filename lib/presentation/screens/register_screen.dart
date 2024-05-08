@@ -20,6 +20,48 @@ class _RegisterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 30,),
+
+              FlutterLogo(size: 70,),
+
+              SizedBox(height: 30,),
+
+              _RegisterForm(),
+
+              SizedBox(height: 20,),
+              Text('Hola')
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _RegisterForm extends StatelessWidget {
+  const _RegisterForm();
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      child: Column(
+        children: [
+          TextFormField(decoration: 
+                InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20)),
+                    hintText: "Ingresa tu usuario"
+                ),
+              ),
+        ],
+      ),
+    );
   }
 }

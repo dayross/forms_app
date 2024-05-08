@@ -14,12 +14,25 @@ class HomeScreen extends StatelessWidget {
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () => context.push('/cubits'),
           ),
+
           ListTile(
             title: const Text('BLoC'),
             subtitle: const Text('Gestor de estado compuesto'),
             trailing: const Icon(Icons.arrow_forward_ios_rounded),
             onTap: () => context.push('/counter-bloc'),
-          )
+          ),
+
+          const Padding(
+            padding: EdgeInsets.all(5),
+            child: Divider(),),
+
+          ListTile(
+            leading: const Icon(Icons.person),
+            title: const Text('Nuevo usuario'),
+            subtitle: const Text('Registrar un nuevo usuario'),
+            trailing: const Icon(Icons.arrow_forward_ios_rounded),
+            onTap: () => context.push('/register'),
+          ),
         ],
       )
     );
