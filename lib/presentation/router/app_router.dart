@@ -1,3 +1,4 @@
+import 'package:forms_app/presentation/screens/bloc_counter_screen.dart';
 import 'package:forms_app/presentation/screens/screens.dart';
 import 'package:go_router/go_router.dart';
 
@@ -6,6 +7,10 @@ final appRouter = GoRouter(routes: [
     path: '/',
     builder: (context, state) => const HomeScreen(),
   ),
-  GoRoute(path: '/cubits',
-  builder: (context, state) => const CubitCounterScreen(),)
+  GoRoute(
+    path: '/cubits',
+    builder: (context, state) => const CubitCounterScreen(),),
+  GoRoute(
+    path: '/counter-bloc',
+    builder: (context, state) => const BlocCounterScreen(),)
 ]);
